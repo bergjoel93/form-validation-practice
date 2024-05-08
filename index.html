@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Form Validation Practice</title>
+  </head>
+  <body>
+    <div class="stuff">
+      <h1>Form Validation Practice</h1>
+    </div>
+
+    <div class="form-container">
+      <!-- The novalidate attribute turns off browser's automatic validation. -->
+      <form action="#" novalidate>
+        <h2>The Form</h2>
+        <div class="form-group">
+          <label for="first">First Name</label>
+          <input
+            type="text"
+            required
+            id="first"
+            pattern="^[a-zA-Z]+(?:-[a-zA-Z]+)*$"
+            minlength="2"
+          />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="last">Last</label>
+          <input
+            type="text"
+            id="last"
+            pattern="^[a-zA-Z]+(?:-[a-zA-Z]+)*$"
+            minlength="2"
+          />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select name="country" id="country" required>
+            <option value="" disabled selected>Select your country</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="zip">Zip Code</label>
+          <input type="text" required pattern="\d{5}$" id="zip" />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+            required
+          />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmation">Confirm Password</label>
+          <input type="password" id="confirmation" required />
+          <span class="error" aria-live="polite"></span>
+        </div>
+
+        <div class="form-group">
+          <button id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

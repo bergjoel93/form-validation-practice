@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Jersey+15&family=Reddit+Mono:wght@200..900&family=Space+Grotesk:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: rgb(235, 203, 20);
+  font-family: "Jersey 10", sans-serif;
+  letter-spacing: 2px;
+}
+
+body {
+  background-image: url("background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stuff {
+  width: 90%;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stuff h1 {
+  font-size: 5rem;
+  letter-spacing: 6x;
+  text-align: center;
+}
+
+.form-container {
+  background-color: rgba(180, 17, 240, 0.4);
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+
+  display: flex;
+}
+
+form {
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 1rem;
+  background-color: rgba(240, 17, 195, 0.4);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.form-group {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-bottom: 2px;
+}
+
+form h2 {
+  font-size: 3.5rem;
+  justify-self: center;
+}
+
+input,
+select {
+  flex: 1;
+  background-color: rgba(17, 6, 20, 0.508);
+  font-size: 1.3rem;
+  border-style: none;
+  border-radius: 0.5rem;
+  padding: 6px;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.57);
+  border-style: none;
+  width: 80%;
+  border-radius: 0.5rem;
+  align-self: center;
+  cursor: pointer;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: yellow ridge 2px;
+}
+
+button:hover {
+}
